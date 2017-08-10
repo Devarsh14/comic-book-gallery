@@ -26,6 +26,31 @@ namespace ComicBookGallery.Models
 
 
 
+        public string DisplayText
+        {
+            get
+            {
+                return SeriesTitle + "# " + IssueNumber;
+            }
+        }
+
+
+
+        // series-title-issuenumber.jpg   // provies information how we have created whole string for this 
+        // Created customer function or method for creating title using string concatanation
+
+
+        public string CoverImageFileName
+        {
+            get
+            {
+                return SeriesTitle.Replace(" ", "-").ToLower() + "-" + IssueNumber + ".jpg";
+            }
+        }
+
+
+
+
 
 
 
