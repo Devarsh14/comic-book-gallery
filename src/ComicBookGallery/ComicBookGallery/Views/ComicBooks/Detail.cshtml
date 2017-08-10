@@ -1,16 +1,7 @@
 ﻿@{
     Layout = null;
-    var seriesTitle = "The amazing spoder-ma";
-    var issueNumber = 700;
-    var descripiton = "<p> Final Issue!</p>";
-    var artists = new string[]
-    {
-        "Script: Dan slott",
-        "Pencil: humberto",
-        "Inks:victor olababa",
-        "Letters: Chris",
-
-    };
+   
+   
 }
 
 <!DOCTYPE html>
@@ -22,21 +13,21 @@
 </head>
 <body>
     <div>
-    <h1> @seriesTitle</h1>
-        <h2>Isssue #@issueNumber</h2>
+    <h1> @ViewBag.SeriesTitle</h1>
+        <h2>Isssue #@ViewBag.IssueNumber</h2>
         <h5>Description</h5>
 
-        <div>@Html.Raw(descripiton)</div>
+        <div>@Html.Raw(ViewBag.Descripiton)</div>
         
         
-        @if (artists.Length > 0)
+        @if (ViewBag.Artists.Length > 0)
         {
             <h5>Artists: </h5>
             <div>
                 <ul>
 
 
-                    @foreach (var artist in artists)
+                    @foreach (var artist in ViewBag.Artists)
                     {
                         <li>
                             <text> @artist</text>
